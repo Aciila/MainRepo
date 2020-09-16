@@ -1,0 +1,32 @@
+.Game {
+    text-align: center;
+}
+
+.Game-status {
+    padding: 20px;
+}
+
+.Game-intro {
+    font-size: large;
+}
+
+.Card {
+    border-color: white;
+    border-width: 5px;
+    border-style: solid;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 100px;
+    height: 155px;
+}
+
+.Matched {
+    visibility: hidden;
+}
+
+.CardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    margin: auto;
+}
