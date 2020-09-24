@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import './Game.css';
 import CardView from './CardView';
 import { useDispatch, useSelector } from 'react-redux'
@@ -11,10 +11,11 @@ const GameView = () => {
     const turnNo = useSelector(state => state.turnNo); 
     const gameComplete = useSelector(state => state.gameComplete);
     const pairsFound = useSelector(state => state.pairsFound);
+    const numClicksWithinTurn = useSelector(state => state.numClicksWithinTurn);
 
-    useEffect(() => {
-        setInterval(() => dispatch(checkMatchedPair()), 5000);
-    }, [dispatch]);
+    if (pairsFound === 7 && numClicksWithinTurn === 2) {
+        dispatch(checkMatchedPair())
+    }
 
     const getCardViews = () => {
         let cardViews = [];

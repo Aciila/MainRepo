@@ -6,7 +6,7 @@ import memoryGame from './reducers'
 import { shuffleCards } from './actions';
 import { Provider } from 'react-redux'
 
-const store = createStore(memoryGame);
+const store = createStore(memoryGame, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 store.dispatch(shuffleCards());
 
 ReactDOM.render(
