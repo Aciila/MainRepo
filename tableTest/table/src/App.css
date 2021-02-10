@@ -1,0 +1,15 @@
+.table {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  margin-top: 80px;
+  cursor: pointer;
+}
+.column:hover {
+  background-color: rgb(110, 103, 103)
+}
+.btn-fill {
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+}
